@@ -1,0 +1,12 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: nativeconfigserver
+  profiles:
+    active: native #设置使用本地配置(默认是git,可以设置：subversion(SVN)，native(本地))
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
